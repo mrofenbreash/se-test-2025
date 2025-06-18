@@ -48,9 +48,13 @@ function init() {
      * @param {number} time - Time to calculate coordinates
      * @returns {number[]} - Coordinates in Array
      */
-    function getCoordinates(time) {
-        // TODO: implement body of this function
-        return [0.0, 1.0];
+    function getCoordinates(time) { 
+        const T = 5; //  которая принимает в качестве параметра время - 5 sec for example
+        const angularSpeed = 2 * Math.PI / T; // speed
+        const radian = angularSpeed * time; // ugol value
+        const x = Math.cos(radian); // norm x coord
+        const y = Math.sin(radian); // nprm y coord
+        return [x, y];
     }
 
     /**
